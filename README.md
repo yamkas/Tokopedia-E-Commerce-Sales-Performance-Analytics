@@ -14,4 +14,46 @@ Untuk mendiagnosis akar masalah bisnis ini, dilakukan pendekatan analisis terstr
 5. **Why 5 (Akar Masalah Utama):**
    * *Kesimpulan:* Strategi promosi salah fokus. Manajemen terlalu mengandalkan trik psikologi diskon coret (`discount_percent`) dan mengorbankan kualitas produk, padahal perilaku pembeli modern saat ini jauh lebih mengutamakan aspek **Reputasi Merchant** dan **Kepuasan Ulasan (`rating`)**.
 
+## 2. Business Questions & Metrik Dasbor
+Berdasarkan akar masalah di atas, analisis data ini akan difokuskan untuk menjawab 5 pertanyaan bisnis strategis berikut:
 
+1. **BQ 1 (Efektivitas Promosi):** Apakah pemberian persentase diskon (`discount_percent`) yang tinggi berbanding lurus dengan peningkatan jumlah produk yang terjual (`sold_count`)?
+   * *Metrik:* `discount_percent`, `sold_count`, `price`
+2. **BQ 2 (Kepercayaan Konsumen):** Manakah faktor yang lebih sensitif mendorong volume penjualan (`sold_count`) produk: harga yang murah (`price`) atau penilaian kepuasan konsumen (`rating`)?
+   * *Metrik:* `price`, `rating`, `sold_count`
+3. **BQ 3 (Operasional Geografis):** Bagaimana sebaran performa penjualan (`sold_count`) berdasarkan lokasi asal toko (`shop_city`) dan jalur logistiknya (`status` Active vs Warehouse)?
+   * *Metrik:* `shop_city`, `status`, `sold_count`, `rating`
+4. **BQ 4 (Logistik & Berat Barang):** Bagaimana korelasi antara berat produk (`weight`) dengan volume penjualan (`sold_count`) di pasar e-commerce?
+   * *Metrik:* `weight`, `weight_unit`, `sold_count`
+5. **BQ 5 (Optimasi Konten Halaman):** Bagaimana pengaruh panjang teks deskripsi produk (`description`) terhadap tingkat kepuasan konsumen (`rating`) dan volume penjualan (`sold_count`) di Tokopedia?
+
+## 3. Identifikasi Pemangku Kepentingan (Stakeholders)
+Hasil dari analisis data dan rancangan dasbor ini ditujukan kepada pihak-pihak internal berikut untuk pengambilan keputusan berbasis data (*data-driven actions*):
+
+* **VP of Marketing / CMO:** Menggunakan analisis BQ 1 & BQ 2 untuk mengoptimalkan anggaran biaya subsidi promosi agar tidak dialokasikan pada merchant dengan rating buruk.
+* **Head of Logistics & Fulfillment:** Menggunakan analisis BQ 3 & BQ 4 untuk memantau efektivitas gudang otomatis (`Warehouse`) dan efisiensi ongkos kirim berdasarkan zonasi kota.
+* **Category / Product Manager:** Menggunakan analisis BQ 5 untuk menentukan standardisasi pengisian halaman etalase produk (seperti minimal panjang karakter deskripsi).
+* **Merchant Relations Manager:** Menggunakan ID unik merchant hasil ekstraksi untuk menyaring, mengelompokkan, dan memberikan pelatihan berkala bagi penjual dengan performa rendah.
+
+## 4. Scope of Work (SOW) & Data Selection
+Untuk menjaga efisiensi proses komputasi, ketepatan waktu proyek, serta menghindari perluasan masalah yang tidak terkontrol (*Scope Creep*), proyek portofolio ini menerapkan batasan masalah yang ketat.
+
+Dari total **36 kolom data mentah (*raw columns*)** hasil scraping Tokopedia, dilakukan penyaringan secara selektif sehingga hanya menyisakan **9 kolom utama** yang masuk dalam cakupan analisis (*In-Scope*). Kolom sisa lainnya (seperti properti aset media gambar, tautan URL eksternal, dan ID internal sistem) resmi diabaikan karena tidak memiliki kontribusi langsung terhadap pemetaan metrik bisnis.
+
+### 🟩 A. Cakupan Variabel yang Digunakan (In-Scope)
+
+1. **`sold_count`** *(Numerik)*: Target variabel utama sebagai indikator volume transaksi sukses untuk mengukur tingkat larisnya suatu produk.
+2. **`price`** *(Numerik)*: Variabel finansial harga bersih konsumen, digunakan untuk menguji sensitivitas elastisitas harga pasar.
+3. **`discount_percent`** *(Teks/Numerik)*: Besaran angka diskon coret, digunakan untuk mengevaluasi efektivitas biaya promosi toko.
+4. **`rating`** *(Numerik)*: Skor kepuasan pelanggan skala 1.0 s/d 5.0, digunakan sebagai representasi utama reputasi kualitas produk.
+5. **`review_count`** *(Numerik)*: Akumulasi jumlah ulasan tertulis pembeli, mencerminkan tingkat interaksi riil produk di pasar.
+6. **`shop_city`** *(Teks/Lokasi)*: Lokasi kota asal operasional merchant berada, digunakan untuk kebutuhan pemetaan spasial/geografis.
+7. **`status`** *(Kategori)*: Jalur manajemen logistik produk, membandingkan efisiensi pengiriman mandiri (`Active`) vs gudang otomatis (`Warehouse` / Dilayani Tokopedia).
+8. **`weight`** *(Numerik)*: Berat fisik produk dalam satuan gram, digunakan untuk mengukur dampak sensitivitas beban ongkos kirim terhadap minat beli.
+9. **`description`** *(Teks)*: Konten penjelasan detail spesifikasi produk, digunakan untuk analisis kuantitatif panjang karakter halaman etalase.
+
+
+### 🟥 B. Cakupan yang Dikeluarkan (Out-of-Scope)
+* **No Real-Time Monitoring:** Analisis ini bersifat statis (*snapshot data*). Dasbor tidak dihubungkan ke API live Tokopedia, sehingga fluktuasi stok atau harga hari ini tidak tercakup.
+* **No Internal Accounting Financials:** Proyek tidak membedah margin keuntungan bersih (*Net Profit*), biaya modal modal (*COGS*), atau beban pajak internal perusahaan karena keterbatasan ketiadaan kolom laporan keuangan internal pada raw data.
+* **No Machine Learning Advanced Modeling:** Fokus proyek dibatasi pada lingkup *Descriptive & Diagnostic Analytics* (apa yang terjadi dan mengapa terjadi). Pemodelan prediktif tingkat lanjut (seperti *Predictive Sales Forecasting* atau *Sentiment Analysis AI*) dikeluarkan dari target *deliverables* proyek saat ini.
