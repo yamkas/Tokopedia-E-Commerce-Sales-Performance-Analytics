@@ -57,3 +57,17 @@ Dari total **36 kolom data mentah (*raw columns*)** hasil scraping Tokopedia, di
 * **No Real-Time Monitoring:** Analisis ini bersifat statis (*snapshot data*). Dasbor tidak dihubungkan ke API live Tokopedia, sehingga fluktuasi stok atau harga hari ini tidak tercakup.
 * **No Internal Accounting Financials:** Proyek tidak membedah margin keuntungan bersih (*Net Profit*), biaya modal modal (*COGS*), atau beban pajak internal perusahaan karena keterbatasan ketiadaan kolom laporan keuangan internal pada raw data.
 * **No Machine Learning Advanced Modeling:** Fokus proyek dibatasi pada lingkup *Descriptive & Diagnostic Analytics* (apa yang terjadi dan mengapa terjadi). Pemodelan prediktif tingkat lanjut (seperti *Predictive Sales Forecasting* atau *Sentiment Analysis AI*) dikeluarkan dari target *deliverables* proyek saat ini.
+
+## 5. KPI Utama Bisnis & Target Sukses 
+
+| Pertanyaan Bisnis (BQs) | KPI Utama Bisnis | Target Target / Sukses |
+| :--- | :--- | :--- |
+| **BQ 1: Efektivitas Promosi** | **Promo Revenue ROI**<br>(Mengukur pengembalian profit dari modal diskon) | Korelasi positif yang signifikan; peningkatan diskon wajib diikuti kenaikan volume transaksi **minimal 25%**. |
+| **BQ 2: Kepercayaan Konsumen & Strategi Harga** |**Customer Satisfaction Score (CSAT)**<br>(Rata-rata kepuasan terhadap volume transaksi)<br><br> **Premium Pricing Penetration Rate**<br>(Efektivitas penjualan segmen harga menengah-atas) | Mendominasi segmen produk ber-rating > 4.5 dengan kontribusi penjualan **minimum 60%** dari total pasar.<br><br>Menjaga stabilitas volume transaksi pada segmen produk premium (harga menengah-atas) agar berkontribusi **minimal 15%** terhadap total penjualan guna menjaga profit margin perusahaan. |
+| **BQ 3: Operasional Geografis** | **Fulfillment SLA Rate**<br>(Persentase adopsi pengiriman gudang otomatis) | Produk berstatus 'Warehouse' menghasilkan volume transaksi **40% lebih cepat** dibanding toko mandiri. |
+| **BQ 4: Logistik Berat Barang** | **Shipping Cost Sensitivity Index**<br>(Sensitivitas beban logistik produk) | Mengurangi hambatan *checkout* pembeli pada produk berat (>2 kg) dengan memicu volume konversi stabil. |
+| **BQ 5: Optimasi Konten Halaman** | **Product Page Conversion Rate**<br>(Efektivitas kualitas pengisian konten etalase) | Halaman produk dengan panjang deskripsi > 200 karakter memicu tingkat *review* aktif **15% lebih tinggi**. *(Note: talk_count dieliminasi due to zero variance)* |
+
+
+
+
