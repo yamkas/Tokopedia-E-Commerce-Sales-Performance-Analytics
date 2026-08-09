@@ -66,7 +66,7 @@ Dari total **36 kolom data mentah (*raw columns*)** hasil scraping Tokopedia, di
 | **BQ 2: Kepercayaan Konsumen & Strategi Harga** |**Customer Satisfaction Score (CSAT)**<br>(Rata-rata kepuasan terhadap volume transaksi)<br><br> **Premium Pricing Penetration Rate**<br>(Efektivitas penjualan segmen harga menengah-atas) | Mendominasi segmen produk ber-rating > 4.5 dengan kontribusi penjualan **minimum 60%** dari total pasar.<br><br>Menjaga stabilitas volume transaksi pada segmen produk premium (harga menengah-atas) agar berkontribusi **minimal 15%** terhadap total penjualan guna menjaga profit margin perusahaan. |
 | **BQ 3: Operasional Geografis** | **Fulfillment SLA Rate**<br>(Persentase adopsi pengiriman gudang otomatis) | Produk berstatus 'Warehouse' menghasilkan volume transaksi **40% lebih cepat** dibanding toko mandiri. |
 | **BQ 4: Logistik Berat Barang** | **Shipping Cost Sensitivity Index**<br>(Sensitivitas beban logistik produk) | Mengurangi hambatan *checkout* pembeli pada produk berat (>2 kg) dengan memicu volume konversi stabil. |
-| **BQ 5: Optimasi Konten Halaman** | **Product Page Conversion Rate**<br>(Efektivitas kualitas pengisian konten etalase) | Halaman produk dengan panjang deskripsi > 200 karakter memicu tingkat *review* aktif **15% lebih tinggi**. *(Note: talk_count dieliminasi due to zero variance)* |
+| **BQ 5: Optimasi Konten Halaman** | **Product Page Conversion Rate**<br>(Efektivitas kualitas pengisian konten etalase) | Halaman produk dengan panjang deskripsi > 500 karakter memicu rata-rata volume penjualan 15% lebih tinggi dan mempertahankan nilai kepuasan pelanggan di atas 4.90.* |
 
 
 
