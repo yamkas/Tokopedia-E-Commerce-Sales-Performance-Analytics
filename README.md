@@ -88,3 +88,9 @@ Dari total **36 kolom data mentah (*raw columns*)** hasil scraping Tokopedia, di
 - Memberikan rekomendasi kepada Head of Logistics untuk merancang program subsidi ongkir terzonasi (*zonal shipping subsidy*) serta memperbanyak pembukaan cabang gudang pintar lokal (*micro-fulfillment hubs*) di wilayah padat pembeli khusus untuk menampung stok barang berbobot berat agar jarak kirim memendek dan konversi penjualan kembali stabil.
 - Memberikan rekomendasi strategis kepada Category Manager untuk menerbitkan regulasi operasional baru berupa kewajiban pengisian deskripsi produk minimal 500 karakter (*strict character threshold enforcement*) bagi para seller e-commerce guna mengamankan standarisasi kualitas etalase dan mendongkrak angka konversi transaksi secara massal.
 
+## Dashboard Overview 
+
+<p align="center">
+  <img src="Dashboard Tokped Periode Desember 2025.png" alt="Tokopedia E-Commerce Sales Performance Dashboard" width="100%">
+</p>
+
