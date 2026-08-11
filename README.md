@@ -91,6 +91,6 @@ Dari total **36 kolom data mentah (*raw columns*)** hasil scraping Tokopedia, di
 ## Dashboard Overview 
 
 <p align="center">
-  <img src="Dashboard Tokped Periode Desember 2025.png" alt="Tokopedia E-Commerce Sales Performance Dashboard" width="100%">
+  <img src="Dashboard Tokped Periode Desember 2025" alt="Tokopedia E-Commerce Sales Performance Dashboard" width="100%">
 </p>
 
