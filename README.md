@@ -89,7 +89,7 @@ Dari total **36 kolom data mentah (*raw columns*)** hasil scraping Tokopedia, di
 - Memberikan rekomendasi strategis kepada Category Manager untuk menerbitkan regulasi operasional baru berupa kewajiban pengisian deskripsi produk minimal 500 karakter (*strict character threshold enforcement*) bagi para seller e-commerce guna mengamankan standarisasi kualitas etalase dan mendongkrak angka konversi transaksi secara massal.
 
 ## Dashboard Overview 
-![Dashboard Tokopedia](dashboard-tokopedia-desember-2025.png)
+![Dashboard Tokopedia](Dashboard_Tokopedia_Periode_Desember_2025.png)
 
 
 
